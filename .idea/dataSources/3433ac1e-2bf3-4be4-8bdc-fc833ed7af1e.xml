@@ -1120,27 +1120,70 @@
     <table id="281" parent="3" name="cliente"/>
     <column id="282" parent="281" name="id">
       <Position>1</Position>
-      <DataType>int|0s</DataType>
+      <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="283" parent="281" name="nome">
       <Position>2</Position>
-      <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="281" name="possui_emprego">
+    <column id="284" parent="281" name="endereco">
       <Position>3</Position>
-      <DataType>bit(1)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="285" parent="281" name="PRIMARY">
+    <column id="285" parent="281" name="rendimento_mensal">
+      <Position>4</Position>
+      <DataType>float|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="286" parent="281" name="possui_emprego">
+      <Position>5</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <DefaultExpression>1</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="287" parent="281" name="valor_tot_patrimonio">
+      <Position>6</Position>
+      <DataType>float|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="288" parent="281" name="valor_tot_dividas">
+      <Position>7</Position>
+      <DataType>float|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="289" parent="281" name="valor_emprestimo_solicitado">
+      <Position>8</Position>
+      <DataType>float|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="290" parent="281" name="valor_emprestimo_final">
+      <Position>9</Position>
+      <DataType>float|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="291" parent="281" name="numero_parcelas">
+      <Position>10</Position>
+      <DataType>int|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="292" parent="281" name="nome">
+      <ColNames>nome</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="293" parent="281" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
+    </key>
+    <key id="294" parent="281" name="nome">
+      <ColNames>nome</ColNames>
+      <UnderlyingIndexName>nome</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>
